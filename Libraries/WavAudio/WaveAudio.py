@@ -151,7 +151,7 @@ class WavAudio:
         """print out the current object header"""
         for field in self.wave_header.keys():
             print(field + ': {}'.format(int.from_bytes(self.wave_header[field], "little" )))
-
+ 
     def print_file_header(self, filename: str):
         file = open(filename, 'rb')
         for field in self.wave_header.keys():
